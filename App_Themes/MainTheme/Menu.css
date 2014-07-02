@@ -1,0 +1,19 @@
+﻿img {
+	width: 100%;
+}
+.Menu {  
+	width: 100%;
+	background: deepskyblue;
+	margin: 0px;
+}
+.Menu td {
+	font: bold 30px 'Segoe UI', sans-serif;
+	height: 4em;
+	text-align: center;
+}
+.Menu td a {
+	color: midnightblue;
+}
+.Menu td a:hover {
+	color: white;
+}

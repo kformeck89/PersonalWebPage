@@ -1,0 +1,21 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master1.master.cs" Inherits="Master1" %>
+<%@ Register Src="~/Controls/HeaderMenu.ascx" TagName="HeaderMenu" TagPrefix="uc1" %>
+
+<!DOCTYPE html PUBLIC>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Main.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="main_form" runat="server">
+        <div>
+            <uc1:HeaderMenu ID="MainMenu" runat="server" />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server" />
+        </div>
+    </form>
+</body>
+</html>
