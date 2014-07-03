@@ -1,5 +1,18 @@
-﻿body {
+﻿body {	
 	background: midnightblue;
 	font-family: 'Segoe UI', sans-serif;
+	font-size: large;
+	font-weight: bold;
 	color: deepskyblue;
+}
+.content_div {
+	font-family: 'Segoe UI', sans-serif;
+	font-weight: bold;
+	font-size: xx-large;
+	color: white;
+	height: 10em;
+}
+.image {
+	height: 100%;
+	width: auto;
 }
