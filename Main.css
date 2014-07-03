@@ -6,13 +6,17 @@
 	color: deepskyblue;
 }
 .content_div {
-	font-family: 'Segoe UI', sans-serif;
-	font-weight: bold;
-	font-size: xx-large;
-	color: white;
-	height: 10em;
+	height: 2em;
 }
-.image {
+.content_div > div {
+	padding: 2em;
+	text-wrap:normal;
+	font-family: 'Segoe UI', sans-serif;
+	font-size: x-large;
+	text-align: left;
+	color: white;
+}
+.content_div > img {
 	height: 100%;
 	width: auto;
 }
