@@ -1,22 +1,24 @@
 ﻿body {	
 	background: midnightblue;
 	font-family: 'Segoe UI', sans-serif;
-	font-size: large;
+	font-size: xx-large;
 	font-weight: bold;
-	color: deepskyblue;
-}
-.content_div {
-	height: 2em;
+    color: deepskyblue;
 }
 .content_div > div {
+    font-size: 3em;
 	padding: 2em;
-	text-wrap:normal;
-	font-family: 'Segoe UI', sans-serif;
-	font-size: x-large;
+	word-wrap:normal;
 	text-align: left;
-	color: white;
+}
+.odd > td {
+    background-color: deepskyblue;
+    color: white;
+}
+.even td {
+    background-color: white;
+    color: midnightblue;
 }
 .content_div > img {
-	height: 100%;
-	width: auto;
+    width: 100%;
 }

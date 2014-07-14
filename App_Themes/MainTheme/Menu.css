@@ -4,7 +4,8 @@
 .Menu {  
 	width: 100%;
 	background: deepskyblue;
-	margin: 0px;
+    position: fixed;
+	margin: -10px;
 }
 .Menu td {
 	font: bold 30px 'Segoe UI', sans-serif;

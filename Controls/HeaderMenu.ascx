@@ -1,7 +1,11 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="HeaderMenu.ascx.cs" Inherits="MasterPageEx.HeaderMenu" %>
+<!--
 <asp:Image
     runat="server"
     ImageUrl="~/Resources/Jellyfish.jpg" />
+ -->
+
+
 <asp:Menu 
     ID="Menu1"
     runat="server"
@@ -19,6 +23,7 @@
         <asp:MenuItem
             Text="Code" />
         <asp:MenuItem
+            NavigateUrl="~/Links.aspx"
             Text="Links" />
     </Items>
 </asp:Menu>
