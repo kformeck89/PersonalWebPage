@@ -7,6 +7,23 @@
 <head runat="server">
     <title></title>
     <link rel="stylesheet" type="text/css" href="Main.css" />
+    <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.1.js"></script>
+    <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.1-vsdoc.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                currentOffset = window.pageYOffset;
+                if (currentOffset < 500) {
+                    $("#MainMenu_imgBanner").animate({
+                        'margin-bottom': -currentOffset
+                    }, 1);
+                    $("#MainMenu_Menu1_SkipLink+table").animate({
+                        'margin-top': currentOffset
+                    }, 1);
+                } 
+            })
+        });
+    </script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
