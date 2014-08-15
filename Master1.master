@@ -1,4 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master1.master.cs" Inherits="Master1" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <%@ Register Src="~/Controls/HeaderMenu.ascx" TagName="HeaderMenu" TagPrefix="uc1" %>
 
 <!DOCTYPE html PUBLIC>
@@ -11,16 +13,23 @@
     <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.1-vsdoc.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+            var MAX_OFFSET = 500;
+            var MAX_IMG_HEIGHT = 50;
             $(window).scroll(function () {
                 currentOffset = window.pageYOffset;
-                if (currentOffset < 500) {
+                if (currentOffset < MAX_OFFSET) {
+                    var newHeight = MAX_IMG_HEIGHT -
+                        ((MAX_IMG_HEIGHT * currentOffset) / MAX_OFFSET);
+                    newHeight = newHeight > MAX_IMG_HEIGHT
+                        ? MAX_IMG_HEIGHT : newHeight;
                     $("#MainMenu_imgBanner").animate({
-                        'margin-bottom': -currentOffset
+                        'height': newHeight + "%"
                     }, 1);
-                    $("#MainMenu_Menu1_SkipLink+table").animate({
-                        'margin-top': currentOffset
+                } else {
+                    $("#MainMenu_imgBanner").animate({
+                        'height': "0%"
                     }, 1);
-                } 
+                }
             })
         });
     </script>
@@ -29,6 +38,7 @@
 </head>
 <body>
     <form id="main_form" runat="server">
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"/>
         <div>
             <uc1:HeaderMenu ID="MainMenu" runat="server" />
             <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server" />

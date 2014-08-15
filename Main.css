@@ -8,6 +8,10 @@
 .content_div > div {
     font-size: 3em;
 	padding: 2em;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 8em;
+	margin-bottom: 0;
 	word-wrap:normal;
 	text-align: left;
 }
